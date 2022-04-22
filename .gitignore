@@ -1,0 +1,7 @@
+/venv
+.idea
+banco/migrations
+banco/__init__.py
+banco/__pycache__
+financeiro/__init__.py
+financeiro/__pycache__

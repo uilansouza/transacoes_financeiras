@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+         <!--Import Google Icon Font-->
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+         <!-- Compiled and minified JavaScript -->
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+         <!--Let browser know website is optimized for mobile-->
+         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Inicio</title>
+    </head>
+    <body>
+        <h1>Arquivos</h1>
+        <a href="{% url 'index' %}">Voltar ao inicio</a>
+        <div style="padding: 20px 20px 20px 20px;"> 
+        <table class="highlight">
+            <thead>
+              <tr>
+                  <th>Data transação</th>
+                  <th>Data Importação</th>
+
+                 
+              </tr>
+            </thead>
+    
+            <tbody>
+                {%for banco in bancos %}
+                <tr> 
+                    <td>{{banco.data_hora_trasacao}}</td>
+                    <td>{{banco.data_importacao}}</td>
+
+                {%endfor%}
+                </tr>
+            </tbody>
+          </table>
+        </div>
+          <script type="text/javascript" src="js/materialize.min.js"></script>
+    </body>
+    <!--JavaScript at end of body for optimized loading-->
+    
+</html>
+

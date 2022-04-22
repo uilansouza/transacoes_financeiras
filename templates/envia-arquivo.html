@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Inicio</title>
+    </head>
+    <body>
+        <h1>Inicio</h1>
+        {% include 'partials/_alertas.html'%}
+        <form name="envia_file" action="" method="post"  enctype="multipart/form-data">
+            {% csrf_token %}
+            <div>
+                <label for="nome">Escolha o arquivo:</label>
+                <input type="file" accept=".csv"  name="file_csv" id="file" />
+            </div>
+        
+            <button class="btn btn-success" type="submit">Enviar</button>
+        </form>
+    </body>
+</html>
+
